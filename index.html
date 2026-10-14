@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#11110f">
+  <meta name="description" content="Discover exceptional rooms, thoughtful service, and unforgettable experiences at Aurelia Luxury Hotel & Spa.">
+  <title>Aurelia | Luxury Hotel & Spa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+    
+<!-- AURELIA CINEMATIC PRELOADER -->
+<div class="aurelia-loader" id="aureliaLoader" role="status"
+     aria-label="Loading AURELIA Hotel and Spa">
+  <div class="loader-grain"></div>
+
+  <div class="loader-content">
+    <div class="loader-emblem" aria-hidden="true">
+      <svg viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="45"/>
+        <path d="M24 72 50 20 76 72H62L50 47 38 72Z"/>
+        <path d="M20 56Q50 26 80 56"/>
+      </svg>
+    </div>
+
+    <div class="loader-brand">AURELIA</div>
+    <div class="loader-subtitle">HOTEL &amp; SPA</div>
+
+    <div class="loader-divider">
+      <span></span>
+    </div>
+
+    <p class="loader-tagline">A QUIETER KIND OF EXTRAORDINARY.</p>
+
+    <div class="loader-progress">
+      <span id="loaderProgress"></span>
+    </div>
+
+    <div class="loader-footer">
+      <span>AN EXPERIENCE IN REFINED LIVING</span>
+      <span id="loaderPercent">00</span>
+    </div>
+  </div>
+</div>
+
+  <div class="scroll-progress" id="progress"></div>
+
+  <header class="site-header" id="header">
+<a href="#home" class="logo" aria-label="Aurelia Hotel and Spa home">
+  <span class="logo-emblem" aria-hidden="true">
+    <svg viewBox="0 0 64 64" fill="none">
+      <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M13 49 L31 12 L50 49 H40 L31 29 L22 49 Z"
+            fill="currentColor"/>
+      <path d="M12 35 C22 22 39 49 52 32"
+            stroke="#171713" stroke-width="3.2" stroke-linecap="round"/>
+      <path d="M32 49 C27 43 24 43 23 40 C30 40 32 44 32 49 Z"
+            fill="currentColor"/>
+      <path d="M32 49 C36 42 39 42 41 39 C34 40 32 44 32 49 Z"
+            fill="currentColor"/>
+    </svg>
+  </span>
+
+  <span class="logo-text">
+    AURELIA
+    <small><span></span> HOTEL &amp; SPA <span></span></small>
+  </span>
+</a>
+
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="nav">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#rooms" class="nav-link">Our Rooms</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#about" class="nav-link">Our Story</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch color theme">☼</button>
+      <a href="#rooms" class="btn btn-small btn-outline">Explore stays <span>↗</span></a>
+    </nav>
+  </header>
+
+
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-image"></div>
+      <div class="hero-shade"></div>
+
+      <div class="hero-content container">
+        <div class="eyebrow light-eyebrow"><span></span> THE ART OF EXCEPTIONAL LIVING</div>
+        <h1>Some places<br>stay with <em>you.</em></h1>
+        <p>Discover a world where quiet luxury meets extraordinary hospitality. Your escape begins here.</p>
+        <div class="hero-actions">
+          <a href="#rooms" class="btn btn-gold">Discover our rooms <span>↗</span></a>
+          <a href="#experience" class="text-link">Explore the experience <span>↓</span></a>
+        </div>
+      </div>
+
+      <div class="hero-bottom container">
+        <span>AN EXPERIENCE BEYOND EXPECTATION</span>
+        <span class="hero-location">⌖ &nbsp; Your private sanctuary</span>
+      </div>
+    </section>
+
+    <section class="booking-strip container" aria-label="Find a stay">
+      <form class="search-form" id="searchForm">
+        <label class="search-field">
+          <span>CHECK-IN</span>
+          <input type="date" id="searchCheckIn" required>
+        </label>
+        <label class="search-field">
+          <span>CHECK-OUT</span>
+          <input type="date" id="searchCheckOut" required>
+        </label>
+        <label class="search-field guest-field">
+          <span>GUESTS</span>
+          <select id="searchGuests">
+            <option value="1">1 Guest</option>
+            <option value="2" selected>2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5">5 Guests</option>
+            <option value="6">6 Guests</option>
+          </select>
+        </label>
+        <button class="btn btn-dark search-submit" type="submit">Find your stay <span>→</span></button>
+      </form>
+    </section>
+
+    <section class="section rooms-section" id="rooms">
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <div class="eyebrow"><span></span> YOUR PRIVATE RETREAT</div>
+            <h2>Spaces made for<br><em>slowing down.</em></h2>
+          </div>
+          <p class="section-description">Every room tells a story of considered design, refined comfort, and the little details that make a stay unforgettable.</p>
+        </div>
+
+        <div class="room-toolbar">
+          <div class="filter-tabs" id="filterTabs">
+            <button class="filter-btn active" data-filter="all">All rooms</button>
+            <button class="filter-btn" data-filter="suite">Suites</button>
+            <button class="filter-btn" data-filter="deluxe">Deluxe</button>
+            <button class="filter-btn" data-filter="villa">Villas</button>
+          </div>
+          <div class="toolbar-right">
+            <label class="sort-label" for="sortRooms">Sort by</label>
+            <select id="sortRooms" class="sort-select">
+              <option value="featured">Featured</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+              <option value="rating">Top rated</option>
+            </select>
+            <button class="favorites-toggle" id="favoritesToggle" aria-pressed="false">♡ <span>Saved</span> <b id="savedCount">0</b></button>
+          </div>
+        </div>
+
+        <div class="room-grid" id="roomsGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <span>♡</span>
+          <h3>No rooms to show</h3>
+          <p>Try another category or save a room you love.</p>
+          <button class="btn btn-outline" id="resetFilters">Show all rooms</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience-section" id="experience">
+      <div class="experience-image"></div>
+      <div class="experience-content">
+        <div class="eyebrow light-eyebrow"><span></span> MORE THAN A STAY</div>
+        <h2>Leave the ordinary<br>at the <em>door.</em></h2>
+        <p>From slow mornings at the spa to evenings shaped by exceptional cuisine, discover experiences designed around how you want to feel.</p>
+        <div class="experience-list">
+          <div><span>01</span><p><strong>The Aurelia Spa</strong><small>Restore your sense of balance</small></p><span>↗</span></div>
+          <div><span>02</span><p><strong>Dining & Wine</strong><small>Thoughtful menus, beautiful moments</small></p><span>↗</span></div>
+          <div><span>03</span><p><strong>Private Experiences</strong><small>Made personal, made memorable</small></p><span>↗</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section story-section" id="about">
+      <div class="container story-grid">
+        <div class="story-visual">
+          <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=85" alt="A thoughtfully designed luxury hotel suite" loading="lazy">
+          <div class="story-caption"><span>THE AURELIA PROMISE</span><strong>Luxury, felt<br>in every detail.</strong></div>
+        </div>
+        <div class="story-copy">
+          <div class="eyebrow"><span></span> A DIFFERENT KIND OF LUXURY</div>
+          <h2>Considered in<br>every <em>detail.</em></h2>
+          <p>We believe the finest hospitality is never loud. It's the welcome that feels personal, the room that feels like yours, and the service that knows when to appear and when to step away.</p>
+          <p>Aurelia is a place to reconnect with yourself, the people you love, and the pleasure of having nowhere else to be.</p>
+          <a class="text-link dark-link" href="#rooms">Find your room <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="contact-section" id="contact">
+
+  <!-- Left: Contact introduction -->
+  <div class="contact-intro">
+    <div class="eyebrow contact-eyebrow">
+      <span></span> GET IN TOUCH
+    </div>
+
+    <h2>
+      We’d love to<br>
+      <em>hear from you.</em>
+    </h2>
+
+    <p>
+      Whether you have a question, a special request,
+      or simply want to say hello — our team is here
+      to help. Reach out and we’ll respond as soon
+      as possible.
+    </p>
+
+    <div class="contact-signature">The Aurelia Team</div>
+    <div class="signature-line"></div>
+  </div>
+
+  <!-- Center: Luxury interior image -->
+  <div class="contact-visual" role="img"
+       aria-label="Elegant luxury hotel interior">
+    <div class="contact-visual-shade"></div>
+  </div>
+
+  <!-- Right: Contact details -->
+  <div class="contact-details">
+
+    <div class="eyebrow contact-eyebrow">
+      <span></span> CONTACT INFORMATION
+    </div>
+
+    <!-- Email -->
+    <a class="contact-item" href="mailto:hello@aureliahotel.com">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.7"
+             stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="5" width="18" height="14" rx="1"/>
+          <path d="m3 6 9 7 9-7"/>
+        </svg>
+      </div>
+
+      <div class="contact-item-content">
+        <span class="contact-label">EMAIL US</span>
+        <h3>hello@aureliahotel.com</h3>
+        <p>We’ll get back to you within 24 hours.</p>
+      </div>
+    </a>
+
+    <!-- Phone -->
+    <a class="contact-item" href="tel:+2348000000000">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2
+          a1 1 0 0 1 1-.24c1.1.36 2.3.55 3.6.55
+          a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1
+          C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1h3.5
+          a1 1 0 0 1 1 1c0 1.3.19 2.5.55 3.6
+          a1 1 0 0 1-.25 1z"/>
+        </svg>
+      </div>
+
+      <div class="contact-item-content">
+        <span class="contact-label">CALL US</span>
+        <h3>+234 8069028102</h3>
+        <p>Mon – Sun, 8:00 AM – 10:00 PM</p>
+      </div>
+    </a>
+
+    <!-- WhatsApp -->
+    <a class="contact-item"
+       href="https://wa.me/2348069028102"
+       target="_blank" rel="noopener noreferrer">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.7"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.5 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20l1.2-4.8
+          A8.4 8.4 0 1 1 20.5 11.5Z"/>
+          <path d="M9 8.5c.3-.5.6-.5.9-.1l1 1.4
+          c.2.3.1.5-.2.8l-.5.5
+          c.5 1 1.3 1.8 2.3 2.3l.5-.5
+          c.3-.3.5-.4.8-.2l1.4 1
+          c.4.3.4.6-.1.9-.5.4-1.2.6-1.9.4
+          -2.4-.7-4.5-2.8-5.2-5.2-.2-.7 0-1.4.4-1.9Z"/>
+        </svg>
+      </div>
+
+      <div class="contact-item-content">
+        <span class="contact-label">WHATSAPP</span>
+        <h3>+234 7069215496</h3>
+        <p>Chat with us for quick assistance.</p>
+      </div>
+    </a>
+
+    <a class="contact-message-btn" href="mailto:hello@aureliahotel.com">
+      SEND A MESSAGE <span>↗</span>
+    </a>
+
+  </div>
+</section>
+
+    <section class="newsletter-section">
+      <div class="container newsletter-inner">
+        <div>
+          <div class="eyebrow light-eyebrow"><span></span> A NOTE FROM AURELIA</div>
+          <h2>Beautiful things<br>are worth <em>sharing.</em></h2>
+          <p>Join our list for special stays, thoughtful escapes, and a little inspiration.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <label for="newsletterEmail">YOUR EMAIL ADDRESS</label>
+          <div class="newsletter-input">
+            <input id="newsletterEmail" type="email" placeholder="you@example.com" required>
+            <button aria-label="Subscribe" type="submit">→</button>
+          </div>
+          <small>By subscribing, you agree to receive occasional updates from Aurelia.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a href="#home" class="logo footer-logo">
+        
+  <span class="logo-emblem" aria-hidden="true">
+    <svg viewBox="0 0 64 64" fill="none">
+      <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M13 49 L31 12 L50 49 H40 L31 29 L22 49 Z"
+            fill="currentColor"/>
+      <path d="M12 35 C22 22 39 49 52 32"
+            stroke="#171713" stroke-width="3.2" stroke-linecap="round"/>
+      <path d="M32 49 C27 43 24 43 23 40 C30 40 32 44 32 49 Z"
+            fill="currentColor"/>
+      <path d="M32 49 C36 42 39 42 41 39 C34 40 32 44 32 49 Z"
+            fill="currentColor"/>
+    </svg>
+  </span>
+
+  <span class="logo-text">
+    AURELIA
+    <small><span></span> HOTEL &amp; SPA <span></span></small>
+  </span>
+</a>
+
+      </a>
+      <p>A quieter kind of extraordinary.</p>
+      <div class="footer-links">
+        <a href="#rooms">Rooms</a><a href="#experience">Experiences</a><a href="#about">Our story</a><a href="mailto:hello@aurelia.example">Contact</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Aurelia Hotel & Spa. Concept website.</span>
+      <span>Experience Luxury. Experience Aurelia.</span>
+    </div>
+  </footer>
+
+  <!-- Room details / booking modal -->
+  <div class="modal" id="bookingModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModal" aria-label="Close dialog">×</button>
+      <div class="modal-image" id="modalImage"></div>
+      <div class="modal-body">
+        <div class="eyebrow"><span></span> YOUR NEXT ESCAPE</div>
+        <h2 id="modalTitle">Reserve your stay.</h2>
+        <p class="modal-room-name" id="modalRoomName"></p>
+        <form id="bookingForm">
+          <input type="hidden" id="bookingRoomId">
+          <div class="modal-fields">
+            <label>Check-in<input type="date" id="bookingCheckIn" required></label>
+            <label>Check-out<input type="date" id="bookingCheckOut" required></label>
+            <label>Guests<select id="bookingGuests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
+            <label>Full name<input id="bookingName" type="text" placeholder="Your full name" required minlength="2"></label>
+            <label class="full-field">Email address<input id="bookingEmail" type="email" placeholder="you@example.com" required></label>
+          </div>
+          <p class="form-error" id="bookingError" role="alert"></p>
+          <div class="price-summary">
+            <span><span id="nightCount">0</span> nights × <span id="nightRate">₦0</span></span>
+            <strong id="bookingTotal">₦0</strong>
+          </div>
+          <button class="btn btn-gold modal-submit" type="submit">Request a reservation <span>→</span></button>
+          <small class="demo-note">Demo only — no payment is collected and no real reservation is created.</small>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Room image lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="closeLightbox" aria-label="Close image">×</button>
+    <button class="lightbox-arrow prev" id="prevImage" aria-label="Previous room">←</button>
+    <img id="lightboxImage" src="" alt="">
+    <button class="lightbox-arrow next" id="nextImage" aria-label="Next room">→</button>
+    <p id="lightboxCaption"></p>
+  </div>
+
+
+
+  <p class="chat-footer">AURELIA HOTEL &amp; SPA · PRIVATE &amp; PERSONAL</p>
+</section>
+
+</body>
+</html>
